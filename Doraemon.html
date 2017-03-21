@@ -1,0 +1,495 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Doraemon</title>
+</head>
+<style>
+	.all{
+		margin:50px;
+		position:relative;
+	}
+	.face{
+		width:310px;
+		height:300px;
+		border:2px solid #333;
+		border-radius:146px;
+		background: -webkit-gradient(linear, right top, left bottom, from(#fff) ,color-stop(0.20, #07beea), color-stop(0.73, #10a6ce),color-stop(0.95, #000), to(#444));
+		box-shadow: -5px 10px 15px rgba(0,0,0,0.45);
+		position:relative;
+
+	}
+	.eyeb{
+		position:absolute;
+		width:72px;
+		height:83px;
+		border: 2px solid #000;
+		border-radius:35px 35px;
+		background:#fff;
+	}
+	.lefteye{	
+		top:45px;
+		left:82px;	
+		z-index: 2;
+	}
+	.righteye{
+    	top: 45px;
+   	 	left: 156px;
+   	 	z-index: 2;
+	}
+	.eyec{
+		display:block;
+		width: 15px;
+   	 	height: 15px;
+   	 	border-radius: 10px;
+   	 	position:absolute;
+   	 	background:#333; 
+	}
+	.leftblack{
+   	 	top: 100px;
+   	 	left: 130px;
+   	 	z-index: 3;	 	
+	}
+	.rightblack{
+		top: 100px;
+    	left: 170px;
+    	z-index: 3;	
+	}
+	.five{
+		position:relative;
+	}
+	.facefff{
+		position: absolute;
+	   	border: #000 2px solid;
+	   	width: 264px;
+	   	height: 196px;
+	   	border-radius: 150px 150px;
+	   	background: #FFF;
+	   	background:-webkit-gradient(linear, right top, left bottom, from(#fff),color-stop(0.75,#fff),color-stop(0.83,#eee),color-stop(0.90,#999),color-stop(0.95,#444), to(#000));
+	    top: 85px;
+	    left: 22px;
+	    z-index: 1;
+	}
+	.nose{
+		width: 32px;
+    	height: 32px;
+    	border: 2px solid #000;
+    	border-radius: 50px;
+    	background: #c93e00;
+    	position: absolute;
+    	top: 117px;
+    	left: 139px;
+    	z-index: 10;
+	}
+	.nos{
+		width: 10px;
+    	height: 10px;
+    	border-radius: 5px;
+    	box-shadow: 19px 8px 5px #fff;
+    	position: relative;
+    	top: 0px;
+    	left: 0px;
+
+	}
+	.nline{
+		background: #333;
+   		width: 3px;
+   		height: 100px;
+   		top: 140px;
+   		left: 155px;
+   		position: absolute;
+   		z-index: 9;
+	}
+	.mouse{
+		width: 240px;
+    	height: 500px;
+    	border-bottom: 3px solid #333;
+    	border-radius: 120px;
+    	position: absolute;
+    	top: -263px;
+    	left: 36px;
+    	z-index: 1;
+	}
+	.line{
+		background: #333;
+    	height: 2px;
+    	width: 60px;
+    	position: absolute;
+    	z-index: 20;
+	}
+	.left1{
+		transform: rotate(20deg);
+    	top: 145px;
+    	left: 50px;
+	}
+	.left2{
+		top: 165px;
+    	left: 50px;
+	}
+	.left3{
+		transform: rotate(160deg);
+		top: 185px;
+    	left: 50px;
+	}
+	.right1{
+		transform: rotate(160deg);
+		top: 145px;
+    	left: 210px;
+	}
+	.right2{
+		top: 165px;
+    	left: 210px;
+	}
+	.right3{
+		transform: rotate(20deg);
+		top: 185px;
+    	left: 210px;
+	}
+	.hide-face{
+		background: #fff;
+    	width: 240px;
+    	height: 90px;
+    	position: relative;
+    	top: 115px;
+    	left: 35px;
+    	z-index: 12;
+    	border-radius: 45px;
+    	z-index: 1;
+	}
+	.neck{
+		position: relative;
+    	top: -40px;
+    	left: 35px;
+    	z-index: 100;
+	}
+	.belt{
+		width: 230px;
+   		height: 20px;
+   		border: #000 solid 2px;
+   		background: -webkit-gradient(linear, left top, left bottom, from(#ca4100), to(#800400));
+   		border-radius: 10px;
+   		-webkit-border-radius: 10px;
+   		position: relative;
+    	left:5px;
+	}
+	.bell{
+		width: 40px;
+    	height: 40px;
+    	border-radius: 50px;
+    	border: 2px solid #000;
+    	background: -webkit-gradient(linear, left top, left bottom, from(#f9f12a),color-stop(0.5, #e9e11a), to(#a9a100));
+    	box-shadow: -5px 5px 10px rgba(0,0,0,0.25);
+    	position: relative;
+    	top: -15px;
+    	left: 100px;
+	}
+	.bline{
+		width: 36px;
+    	height: 2px;
+    	background: #f9f12a;
+    	border: #333 solid 2px;
+    	position: relative;
+    	top: 10px;
+	}
+	.bcircle{
+		width: 12px;
+    	height: 10px;
+    	border-radius: 5px;
+    	background: #000;
+    	position: relative;
+    	top: 14px;
+    	left: 14px;
+	}
+	.vline{
+		width: 3px;
+    	height: 15px;
+    	background: #000;
+    	position: relative;
+    	top: 10px;
+    	left: 18px;
+	}
+	.star{
+		width: 10px;
+    	height: 10px;
+    	border-radius: 10px;
+    	box-shadow: 19px 8px 5px #fff;
+    	position: relative;
+    	opacity: 0.7;
+    	top: -35px;
+    	left: 5px;
+	}
+	.bodybox{
+		position: absolute;
+   		width: 220px;
+   		height: 165px;
+   		background:-webkit-gradient(linear, right top, left top, from(#07beea),color-stop(0.5, #0073b3),color-stop(0.75,#00b0e0), to(#0096be));
+   		border: #333 2px solid;
+   		top: 286px;
+   		left: 46px;
+	}
+	.bodyboxs{
+		position: absolute;
+	   	width: 170px;
+	   	height: 170px;
+	   	border-radius: 85px;
+	   	border: 2px solid #000;
+	   	background: -webkit-gradient(linear, 100% 0, 0 100%, from(#fff), color-stop(0.75, #fff), color-stop(0.83, #eee), color-stop(0.9, #999), color-stop(0.95, #444), to(#000));
+    	top: 250px;
+    	left: 72px;
+	}
+	.circle{
+		position: relative;
+	    width: 130px;
+	    height: 130px;
+	    border-radius: 65px;
+/*	    background: #fff;*/
+	    background: -webkit-gradient(linear, 100% 0, 0 100%, from(#fff), color-stop(0.7, #fff), color-stop(0.75, #f8f8f8), color-stop(0.8, #eee), color-stop(0.88, #ddd), to(#fff));
+	    border: 2px solid #000;
+	    top: -110px;
+	    left: 92px;
+	}
+	.circlew{
+		position: relative;
+    	width: 134px;
+    	height: 60px;
+    	background: #fff;
+    	border-bottom: 2px solid #000;
+    	top: -235px;
+    	left: 92px;
+	}
+	.lhand{
+		position: absolute;
+    	top: 286px;
+    	left: -46px;
+    	width: 100px;
+    	height: 100px;
+	}
+	.lefta{
+		position: relative;
+    	width: 80px;
+    	height: 50px;
+    	background: #0096be;
+    	border: solid 1px #000;
+    	z-index: -1;
+    	top: 17px;
+    	left: 36px;
+    	transform: rotate(145deg);
+    	box-shadow: 5px -7px 10px rgba(0,0,0,0.25);
+	}
+	.leftc{
+		position: absolute;
+    	width: 60px;
+    	height: 60px;
+    	border-radius: 30px;
+    	border: 2px solid #000;
+    	background: #fff;
+    	background: -webkit-gradient(linear, right top, left bottom, from(#fff),color-stop(0.5,#fff),color-stop(0.70,#eee),color-stop(0.8,#ddd), to(#999));
+    	top: 34px;
+    	left: 10px;
+	}
+	.leftb{
+		position: relative;
+    	width: 4px;
+    	height: 50px;
+    	background: #0096be;
+    	top: -52px;
+    	left: 92px;
+	}
+	.rhand{
+		position: absolute;
+    	top: 286px;
+    	left: 248px;
+    	width: 100px;
+    	height: 100px;
+	}
+	.righta{
+		position: relative;
+	   	width: 80px;
+	   	height: 50px;
+	   background: #07beea;
+	   /*background: -webkit-gradient(linear, 0 0, 0 100%, from(#07beea), color-stop(0.85, #07beea), to(#555));*/
+	   background: -webkit-linear-gradient(#07beea, #07beea 85%, #555);
+	   border: solid 1px #000;
+	   z-index: -1;
+	   top: 17px;
+	   transform: rotate(35deg);
+	   box-shadow: -10px 7px 10px rgba(0,0,0,0.35);
+	}
+	.rightc{
+		position: absolute;
+    	width: 60px;
+    	height: 60px;
+    	border-radius: 30px;
+    	border: 2px solid #000;
+    	background: #fff;
+    	background: -webkit-gradient(linear, right top, left bottom, from(#fff),color-stop(0.5,#fff),color-stop(0.70,#eee),color-stop(0.8,#ddd), to(#999));
+    	top: 32px;
+    	left: 40px;
+	}
+	.rightb{
+		position: relative;
+    	width: 4px;
+    	height: 45px;
+    	background: #07beea;
+    	top: -51px;
+    	left: 18px;
+	}
+	.foot{
+		position: relative;
+    	width: 280px;
+    	height: 40px;
+    	top: -126px;
+    	left: 20px;
+	}
+	.lfoot{
+		width: 125px;
+	    height: 30px;
+	    /*background: -webkit-gradient(linear, 100% 0, 0 100%, from(#fff), color-stop(0.75, #fff), color-stop(0.85, #eee), to(#999));*/
+	    background: -webkit-linear-gradient(right top, #fff, #fff 75%, #eee 85%, #999);
+	    border: solid 2px #333;
+	    -webkit-border-top-left-radius: 80px;
+	    -webkit-border-bottom-left-radius: 40px;
+	    -webkit-border-top-right-radius: 60px;
+	    -webkit-border-bottom-right-radius: 60px;
+	    position: relative;
+	    left: 8px;
+	    top: 10px;
+	    box-shadow: -6px 0px 10px rgba(0,0,0,0.35);
+	    /*z-index: -1;*/
+	}
+	.rfoot{
+		position: relative;
+    	width: 125px;
+    	height: 30px;
+    	background: -webkit-gradient(linear, right top, left bottom, from(#fff),color-stop(0.75,#fff),color-stop(0.85,#eee), to(#999));
+    	border: solid 2px #333;
+    	-webkit-border-top-left-radius: 60px;
+    	-webkit-border-bottom-left-radius: 60px;
+   	 	-webkit-border-top-right-radius: 80px;
+    	-webkit-border-bottom-right-radius: 40px;
+    	top: -24px;
+    	left: 141px;
+    	box-shadow: -6px 0px 10px rgba(0,0,0,0.35);
+	}
+	.mfoot{
+		position: relative;
+    	width: 20px;
+    	height: 10px;
+    	background: -webkit-gradient(linear, right top, left bottom, from(#666),color-stop(0.83,#fff), to(#fff));
+    	top: -67px;
+    	left: 127px;
+    	border-top: 2px solid #000;
+    	border-right: 2px solid #000;
+    	border-left: 2px solid #000;
+   	 	border-top-right-radius: 40px;
+    	border-top-left-radius: 40px;
+	}
+	.mediashadow{
+		width: 85px;
+    	height: 165px;
+    	-webkit-box-shadow: -100px 10px 15px rgba(0,0,0,0.25);
+    	position: absolute;
+    	top: 230px;
+    	left: 113px;
+    	z-index: 10;
+    	opacity: 0.5;
+    	-webkit-transform: rotate(-20deg);
+    	-webkit-border-bottom-left-radius: 40px;
+    	 -webkit-border-top-left-radius: 20px;
+	}
+	.leftshadow{
+		width: 30px;
+    	height: 200px;
+    	box-shadow: -10px 10px 15px rgba(0,0,0,0.45);
+    	/*-webkit-box-shadow: -10px 10px 15px rgba(0,0,0,0.45);*/
+    	position: absolute;
+    	top: 250px;
+    	left: 46px;
+    	z-index: -10;
+	}
+	.rightshadow{
+		width: 30px;
+    	height: 200px;
+    	box-shadow: 10px 10px 15px rgba(0,0,0,0.35);
+    	/*-webkit-box-shadow: 10px 10px 25px rgba(0,0,0,0.35);*/
+    	position: absolute;
+    	top: 240px;
+    	left: 230px;
+    	z-index: -10;
+	}
+	.beltshadow{
+		width: 40px;
+    	height: 30px;
+    	box-shadow: -100px 10px 15px rgba(0,0,0,0);
+    	/*-webkit-box-shadow: -100px 10px 15px rgba(0,0,0,0.25);*/
+    	position: absolute;
+    	top: 240px;
+    	left: 130px;
+    	z-index: 10;
+    	border-bottom-left-radius: 40px;
+    	/*-webkit-border-bottom-left-radius: 40px;*/
+    	z-index: 300;
+	}
+</style>
+<body>
+	<div class="all">
+		<div class="face">
+			<div class="eye">
+				<div class="eyeb lefteye"></div>
+				<div class="eyec leftblack"></div>
+				<div class="eyeb righteye"></div>
+				<div class="eyec rightblack"></div>
+			</div>
+			<div class="five">
+				<div class="facefff"></div>
+				<div class="nose">
+					<div class="nos"></div>
+				</div>
+				<div class="nline"></div>
+				<div class="mouse"></div>
+				<div class="hide-face"></div>
+				<div class="line left1"></div>
+				<div class="line left2"></div>
+				<div class="line left3"></div>
+				<div class="line right1"></div>
+				<div class="line right2"></div>
+				<div class="line right3"></div>
+			</div>
+		</div>
+		<div class="neck">
+			<div class="belt"></div>
+			<div class="bell">
+				<div class="bline"></div>
+				<div class="bcircle"></div>
+				<div class="vline"></div>
+				<div class="star"></div>
+			</div>
+		</div>
+		<div class="body">
+			<div class="bodybox"></div>
+			<div class="bodyboxs"></div>
+			<div class="circle"></div>
+			<div class="circlew"></div>
+		</div>
+		<div class="lhand">
+			<div class="lefta"></div>
+			<div class="leftc"></div>
+			<div class="leftb"></div>
+		</div>
+		<div class="rhand">
+			<div class="righta"></div>
+			<div class="rightc"></div>
+			<div class="rightb"></div>
+		</div>
+		<div class="foot">
+			<div class="lfoot"></div>
+			<div class="rfoot"></div>
+			<div class="mfoot"></div>
+		</div>
+		<div class="mediashadow"></div>
+		<div class="leftshadow"></div>
+		<div class="rightshadow"></div>
+		<div class="beltshadow"></div>
+	</div>
+</body>
+</html>
